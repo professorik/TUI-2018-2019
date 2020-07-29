@@ -1,0 +1,224 @@
+/* Colors */
+* {
+	-fx-bgColor: #2C2D34;
+	-fx-fColor: #3B3BC3;
+	-fx-pColor: #999999;
+	-fx-dColor: #3B3BC3;
+	-fx-ufColor: #F2F2F2;
+}
+.bg {
+	-fx-background-color: -fx-bgColor;
+}
+
+.label {
+	-fx-text-fill: -fx-ufColor;
+	-fx-font-family: Arial;
+	-fx-font-style: normal;
+	-fx-font-size: 15px;
+}
+
+/* Buttons */
+.button {
+    -fx-border-color: -fx-fColor;
+    -fx-background-color: -fx-bgColor;
+    -fx-font-family: "MT Extra";
+    -fx-font-size: 12px;
+    -fx-text-fill: -fx-ufColor;
+   	-fx-border-radius: 50px;
+	-fx-background-radius: 50px;
+}
+
+/* */
+.button:hover {
+	-fx-background-color: -fx-fColor;
+    -fx-text-fill: -fx-bgColor;
+}
+
+.button:active {
+	-fx-border-color: -fx-bgColor;
+}
+
+.text-field {
+	-fx-background-color: -fx-ufColor, -fx-bgColor;
+    -fx-background-insets: 0, 0 0 1 0 ;
+    -fx-background-radius: 0 ;
+    -fx-prompt-text-fill: -fx-pColor;
+    -fx-text-fill: -fx-ufColor;
+}
+
+.text-field:focused {
+	-fx-background-color: -fx-fColor, -fx-bgColor;
+	-fx-font-color: -fx-ufColor;
+}
+
+.menu-button {
+	-fx-background-color: -fx-ufColor, -fx-bgColor;
+
+    -fx-background-insets: 0, 0 0 1 0 ;
+    -fx-background-radius: 0 ;
+}
+
+.menu-item {
+	-fx-pref-width: 248px;
+	-fx-border-color: -fx-bgColor;
+	-fx-background-color: -fx-bgColor;
+
+	-fx-background-color: -fx-ufColor, -fx-bgColor;
+    -fx-background-insets: 0, 0 0 1 0 ;
+    -fx-background-radius: 0 ;
+    -fx-font-color: -fx-pColor;
+}
+
+.menu-item:hover {
+	-fx-background-color: -fx-fColor;
+	-fx-text-fill: -fx-bgColor;
+}
+
+.errorMessage {
+	-fx-alignment: center;
+	-fx-font-size: 14px !important;
+	-fx-text-fill: red !important;
+}
+
+/* MENU BAR + Top-level MENU BUTTONS */
+/*** The menu bar itself ***/    
+.menu-bar {
+    -fx-background-color: -fx-bgColor;
+}
+
+/*** Top-level menu itself (not selected / hovered) ***/
+.menu-bar > .container > .menu-button {
+    -fx-background-color: -fx-bgColor;
+}
+
+/*** Top-level menu's label (not selected / hovered) ***/
+.menu-bar > .container > .menu-button > .label {
+    -fx-text-fill: -fx-ufColor;
+}
+
+/*** Top-level menu's label (disabled) ***/
+.menu-bar > .container > .menu-button > .label:disabled {
+    -fx-opacity: 1.0;
+}
+
+/*** Top-level menu itself (selected / hovered) ***/
+.menu-bar > .container > .menu-button:hover,
+.menu-bar > .container > .menu-button:focused,
+.menu-bar > .container > .menu-button:showing {
+    -fx-background-color: -fx-fColor;
+}
+
+/*** Top-level menu's label (selected / hovered) ***/
+.menu-bar > .container > .menu-button:hover > .label,
+.menu-bar > .container > .menu-button:focused > .label,
+.menu-bar > .container > .menu-button:showing > .label {
+    -fx-text-fill: -fx-ufColor;
+}
+
+/* MENU ITEM (children of a MENU BUTTON) */
+/*** The item itself (not hovered / focused) ***/    
+.menu-item {
+    -fx-background-color: -fx-bgColor; 
+}
+
+/*** The item's label (not hovered / focused) ***/   
+.menu-item .label {
+    -fx-text-fill: -fx-ufColor;
+}
+
+/*** The item's label (disabled) ***/   
+.menu-item .label:disabled {
+    -fx-opacity: 1.0;
+}    
+
+/*** The item itself (hovered / focused) ***/    
+.menu-item:focused, .menu-item:hovered {
+    -fx-background-color: -fx-fColor; 
+}
+
+/*** The item's label (hovered / focused) ***/  
+.menu-item:focused .label, .menu-item:hovered .label {
+    -fx-text-fill: -fx-ufColor;
+}
+
+/* CONTEXT MENU */
+/*** The context menu that contains a menu's menu items ***/  
+.context-menu {
+    -fx-background-color: -fx-bgColor; 
+}
+
+.split-pane {
+	-fx-background-color: -fx-bgColor;
+	-fx-border-color: -fx-dColor;
+}
+
+.split-pane > .split-pane-divider {
+	-fx-background-color: -fx-dColor;
+	
+}
+
+.table-view{
+   -fx-background-color: -fx-bgColor;
+   -fx-border-color: -fx-ufColor;
+}
+
+.table-view:focused{
+    -fx-background-color: -fx-ufColor;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: -fx-bgColor;
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: -fx-bgColor;
+    -fx-text-fill: -fx-ufColor;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+    -fx-text-fill: -fx-ufColor;
+}
+
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color, #616161;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:odd{
+    -fx-background-color: -fx-ufColor, -fx-bgColor;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */  
+}
+
+.table-row-cell:even {
+	-fx-background-color: -fx-ufColor, #595F86;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */ 
+}
+
+.table-row-cell:selected {
+    -fx-background-color: -fx-fColor;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+.table-view > .virtual-flow > .scroll-bar:vertical,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track-background, 
+.table-view > .virtual-flow > .scroll-bar:horizontal,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: transparent;
+}
+
+
+
+.table-view > .virtual-flow > .scroll-bar > .increment-button, 
+.table-view > .virtual-flow > .scroll-bar > .decrement-button {
+    -fx-opacity: 0;
+}

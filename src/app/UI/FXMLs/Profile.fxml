@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="bg" stylesheets="@../CSS/MaterialDesign.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Controllers.ProfileInterfaceController">
+   <children>
+      <MenuBar stylesheets="@../CSS/MaterialDesign.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="28.0" layoutY="62.0" stylesheets="@../CSS/MaterialDesign.css" text="First name:">
+         <font>
+            <Font name="Times New Roman Bold" size="34.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="129.0" stylesheets="@../CSS/MaterialDesign.css" text="Last name:">
+         <font>
+            <Font name="Times New Roman Bold" size="34.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="196.0" stylesheets="@../CSS/MaterialDesign.css" text="Login:">
+         <font>
+            <Font name="Times New Roman Bold" size="34.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="263.0" stylesheets="@../CSS/MaterialDesign.css" text="Gender:">
+         <font>
+            <Font name="Times New Roman Bold" size="34.0" />
+         </font>
+      </Label>
+      <TextField fx:id="LastName" layoutX="243.0" layoutY="135.0" prefHeight="27.0" prefWidth="261.0" stylesheets="@../CSS/MaterialDesign.css" />
+      <TextField fx:id="Login" layoutX="243.0" layoutY="191.0" prefHeight="27.0" prefWidth="261.0" stylesheets="@../CSS/MaterialDesign.css" />
+      <CheckBox fx:id="Male" layoutX="243.0" layoutY="256.0" mnemonicParsing="false" stylesheets="@../CSS/MaterialDesign.css" text="Male">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="Female" layoutX="374.0" layoutY="252.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="133.0" stylesheets="@../CSS/MaterialDesign.css" text="Famale">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </CheckBox>
+      <Button fx:id="ChangeAll" layoutX="158.0" layoutY="334.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="261.0" stylesheets="@../CSS/MaterialDesign.css" text="Correct Info">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Button>
+      <Button fx:id="ChangePassword" layoutX="754.0" layoutY="334.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="261.0" stylesheets="@../CSS/MaterialDesign.css" text="Change Password">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Button>
+      <Label layoutX="569.0" layoutY="62.0" stylesheets="@../CSS/MaterialDesign.css" text="Old Password:">
+         <font>
+            <Font name="Times New Roman Bold" size="34.0" />
+         </font>
+      </Label>
+      <Label layoutX="569.0" layoutY="129.0" stylesheets="@../CSS/MaterialDesign.css" text="New Password:">
+         <font>
+            <Font name="Times New Roman Bold" size="34.0" />
+         </font>
+      </Label>
+      <Label layoutX="569.0" layoutY="191.0" stylesheets="@../CSS/MaterialDesign.css" text="Return New Password:">
+         <font>
+            <Font name="Times New Roman Bold" size="34.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="OldPassword" layoutX="966.0" layoutY="68.0" prefHeight="27.0" prefWidth="261.0" stylesheets="@../CSS/MaterialDesign.css" />
+      <TextField fx:id="FirstName" layoutX="243.0" layoutY="68.0" prefHeight="27.0" prefWidth="261.0" stylesheets="@../CSS/MaterialDesign.css" />
+      <PasswordField fx:id="NewPassword" layoutX="966.0" layoutY="135.0" prefHeight="27.0" prefWidth="261.0" stylesheets="@../CSS/MaterialDesign.css" />
+      <PasswordField fx:id="ReturnNewPassword" layoutX="966.0" layoutY="197.0" prefHeight="27.0" prefWidth="261.0" stylesheets="@../CSS/MaterialDesign.css" />
+      <Separator layoutX="543.0" layoutY="26.0" orientation="VERTICAL" prefHeight="695.0" prefWidth="3.0" stylesheets="@../CSS/MaterialDesign.css" />
+      <Label fx:id="PasswordError" layoutX="754.0" layoutY="402.0" prefHeight="97.0" prefWidth="407.0" stylesheets="@../CSS/MaterialDesign.css" text="PasswordError" textFill="RED" />
+      <Label fx:id="LoginError" layoutX="158.0" layoutY="418.0" prefHeight="65.0" prefWidth="261.0" stylesheets="@../CSS/MaterialDesign.css" text="LoginError" textFill="#f20000" />
+   </children>
+</AnchorPane>

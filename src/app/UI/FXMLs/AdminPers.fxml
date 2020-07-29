@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="bg" stylesheets="@../CSS/MaterialDesign.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Controllers.ControllerAdminPersUI">
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="600.0" stylesheets="@../CSS/MaterialDesign.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="ExitButtonPers" mnemonicParsing="false" text="Выйти" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="View">
+            <items>
+              <MenuItem fx:id="MenuButtonPers" mnemonicParsing="false" text="Меню Блюд" />
+                  <MenuItem fx:id="SaveBoxButtonPers" mnemonicParsing="false" text="Склады" />
+                  <MenuItem fx:id="StatisticButtonPers" mnemonicParsing="false" text="Статистика" />
+                  <MenuItem fx:id="PersonalMenu" mnemonicParsing="false" text="Персонал" />
+                  <MenuItem fx:id="MyProfileButtonPers" mnemonicParsing="false" text="Мой профиль" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="InstructionButtonPers" mnemonicParsing="false" text="Инструкция" />
+                  <MenuItem fx:id="AboutButtonPers" mnemonicParsing="false" text="О программе" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TableView fx:id="MainTablePers" layoutX="14.0" layoutY="96.0" prefHeight="290.0" prefWidth="577.0" stylesheets="@../CSS/MaterialDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+        <columns>
+          <TableColumn fx:id="TypeTable" prefWidth="213.0" text="Тип" />
+          <TableColumn fx:id="NameTable" prefWidth="213.0" text="Имя" />
+            <TableColumn fx:id="SernameTable" prefWidth="213.0" text="Фамилия" />
+            <TableColumn fx:id="LoginTable" prefWidth="213.0" text="Логин" />
+            <TableColumn fx:id="GenderTable" prefWidth="213.0" text="Пол" />
+            <TableColumn fx:id="PasswordTable" prefWidth="214.0" text="Пароль" />
+        </columns>
+      </TableView>
+      <Button fx:id="button" alignment="CENTER_RIGHT" mnemonicParsing="false" opacity="0.0" text="Button" AnchorPane.leftAnchor="1224.0" AnchorPane.rightAnchor="0.0" />
+   </children>
+</AnchorPane>

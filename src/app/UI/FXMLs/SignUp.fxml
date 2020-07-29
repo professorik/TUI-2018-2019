@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="bg" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" styleClass="bg" stylesheets="@../CSS/MaterialDesign.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Controllers.SignUpController">
+   <children>
+      <TextField fx:id="firstNameField" layoutX="50.0" layoutY="164.0" prefHeight="35.0" prefWidth="250.0" promptText="Name" styleClass="field" stylesheets="@../CSS/MaterialDesign.css" AnchorPane.bottomAnchor="198.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="400.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="lastNameField" layoutX="50.0" layoutY="228.0" prefHeight="35.0" prefWidth="250.0" promptText="Surname" styleClass="field" stylesheets="@../CSS/MaterialDesign.css" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="400.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="loginField" layoutX="50.0" layoutY="268.0" prefHeight="35.0" prefWidth="250.0" promptText="Login" styleClass="field" stylesheets="@../CSS/MaterialDesign.css" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="400.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="passwordField" layoutX="367.0" layoutY="181.0" prefHeight="35.0" prefWidth="250.0" promptText="Password" styleClass="field" stylesheets="@../CSS/MaterialDesign.css" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="50.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </PasswordField>
+      <PasswordField fx:id="passwordRepeatField" layoutX="367.0" layoutY="228.0" prefHeight="35.0" prefWidth="250.0" promptText="Repeat password" styleClass="field" stylesheets="@../CSS/MaterialDesign.css" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="50.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </PasswordField>
+      <MenuButton fx:id="typeOfUser" layoutX="352.0" layoutY="261.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="250.0" stylesheets="@../CSS/MaterialDesign.css" text="Role" textFill="WHITE" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="50.0">
+        <items>
+          <MenuItem fx:id="MenuItemClient" mnemonicParsing="false" style="-fx-text-fill: white;" styleClass="dropdownItem" text="Client" />
+          <MenuItem fx:id="MenuItemCook" mnemonicParsing="false" style="-fx-text-fill: white;" styleClass="dropdownItem" text="Cooker" />
+            <MenuItem fx:id="MenuItemAdministrator" mnemonicParsing="false" style="-fx-text-fill: white;" styleClass="dropdownItem" text="Administrator" />
+            <MenuItem fx:id="MenuItemDriver" mnemonicParsing="false" style="-fx-text-fill: white;" styleClass="dropdownItem" text="Driver" />
+        </items>
+         <font>
+            <Font size="17.0" />
+         </font>
+         <styleClass>
+            <String fx:value="dropdown" />
+            <String fx:value="field" />
+         </styleClass>
+      </MenuButton>
+      <MenuButton fx:id="typeOfGender" layoutX="50.0" layoutY="326.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="250.0" stylesheets="@../CSS/MaterialDesign.css" text="Gender" textFill="WHITE" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="400.0">
+         <items>
+            <MenuItem fx:id="MenuItemMale" mnemonicParsing="false" style="-fx-text-fill: white;" styleClass="dropdownItem" text="Male" />
+            <MenuItem fx:id="MenuItemFemale" mnemonicParsing="false" style="-fx-text-fill: white;" styleClass="dropdownItem" text="Female" />
+            <MenuItem fx:id="MenuItemOther" mnemonicParsing="false" style="-fx-text-fill: white;" styleClass="dropdownItem" text="Other" />
+         </items>
+         <font>
+            <Font size="17.0" />
+         </font>
+         <styleClass>
+            <String fx:value="dropdown" />
+            <String fx:value="field" />
+         </styleClass>
+      </MenuButton>
+      <Label fx:id="textAboutPasswordError" layoutX="50.0" layoutY="314.0" prefHeight="17.0" prefWidth="184.0" stylesheets="@../CSS/MaterialDesign.css" text="Ваши пароли не совпадают!" textFill="RED" visible="false">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="textAboutLoginError" layoutX="50.0" layoutY="356.0" prefHeight="17.0" prefWidth="198.0" stylesheets="@../CSS/MaterialDesign.css" text="Такой логин уже существует!" textFill="RED" visible="false">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="textAboutAbsoluteError" layoutX="50.0" layoutY="335.0" prefHeight="17.0" prefWidth="229.0" stylesheets="@../CSS/MaterialDesign.css" text="Все поля должны быть заполнены!" textFill="RED" visible="false">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="cancelButton" layoutX="400.0" layoutY="323.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="100.0" stylesheets="@../CSS/MaterialDesign.css" text="Cancel" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="200.0">
+         <font>
+            <Font name="Comic Sans MS" size="20.0" />
+         </font>
+         <styleClass>
+            <String fx:value="button" />
+            <String fx:value="smoothBordered" />
+         </styleClass>
+      </Button>
+      <Button fx:id="signInButton" layoutX="50.0" layoutY="344.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="100.0" stylesheets="@../CSS/MaterialDesign.css" text="Sign In" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="540.0" AnchorPane.rightAnchor="50.0">
+         <font>
+            <Font name="Comic Sans MS" size="20.0" />
+         </font>
+         <styleClass>
+            <String fx:value="smoothBordered" />
+            <String fx:value="button" />
+         </styleClass>
+      </Button>
+   </children>
+</AnchorPane>
